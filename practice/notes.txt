@@ -1,0 +1,9 @@
+🔹 transforms.ToTensor()
+This is where the conversion happens 🚀
+
+transforms.ToTensor() does two things:
+- Converts the PIL image (0–255) into a PyTorch tensor.
+- Normalizes the pixel values from 0–255 into the range 0–1 (by dividing by 255).
+So after ToTensor(), each MNIST image is now:
+A tensor of shape (1, 28, 28) (1 channel, 28 height, 28 width).
+Pixel values are floats in [0, 1].
