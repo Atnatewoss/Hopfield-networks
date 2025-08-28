@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 # --- Step-0: Load MNIST ---
 mnist = datasets.MNIST(
-    root="./data",
+    root="../data",
     train=True,
     download=True,
     transform=transforms.ToTensor()
@@ -82,7 +82,7 @@ plt.show()
 
 # --- Step-6: Save images to disk for frontend ---
 import os
-os.makedirs("frontend/public", exist_ok=True)  # create folder if it doesn't exist
+os.makedirs("../frontend/public", exist_ok=True)  # create folder if it doesn't exist
 
 # convert from bipolar {-1,+1} to 0-1 for grayscale display
 plt.imsave("../frontend/public/original.png", (original.view(28,28).numpy() + 1)/2, cmap="gray")
